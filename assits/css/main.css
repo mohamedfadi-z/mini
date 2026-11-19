@@ -103,8 +103,11 @@ header button:active {
 
 /* #region sec2 */
 
+
+
+
 .hero {
-    animation: sec2 1s ;
+    animation: sec2 1s;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 70px;
@@ -276,6 +279,217 @@ header button:active {
 /* #endregion */
 
 
+
+/* #region sec3*/
+
+
+.second_sec {
+    background-color: #FCF2E8;
+}
+
+
+
+
+.sec2_title {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 112px;
+    padding-bottom: 64px;
+    gap: 18px;
+}
+
+.sec2_title :nth-child(2) {  
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #845326;
+    position: relative;
+    left: 30px;
+}
+.sec2_title :nth-child(2)::before {  
+    content: "";
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #845326;
+    position: absolute;
+    left: -35px;
+    top: 10px;
+}
+
+
+
+.sec2_title :nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #845326;
+}
+
+.sec2_title :nth-child(3) {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    color: #0E0402;
+}
+
+.sec2_title :nth-child(4) {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+}
+
+.sec2_title :nth-child(5) {
+    display: none;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 113px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.card_img {
+    position: relative;
+}
+
+.card_img img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.card_img .tag {
+    position: absolute;
+    background-color: #FFF8F3E5;
+    color: #845326;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    padding: 5px 14px;
+    border-radius: 12px;
+    top: 20px;
+    left: 20px;
+
+}
+
+.tag span:nth-child(2) {
+    display: none;
+}
+
+.card_img .price {
+    position: absolute;
+    background-color: #2B1B17;
+    color: #FFF8F3;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    padding: 6px 14px;
+    border-radius: 4px;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.card_info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card_info h3 {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    color: #0E0402;
+    margin-bottom: 10px;
+}
+
+.card_info>p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+    margin-bottom: 20px;
+}
+
+
+.rst .row {
+    border-top: 1px solid #D3C3C033;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.rst .row p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+}
+
+.rst .row p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #845326;
+}
+
+.line {
+    height: 7px;
+    background-color: #F6ECE2;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.u_line {
+    height: 7px;
+    border-radius: 12px;
+    background-color: #845326;
+    width: 70%;
+
+}
+
+.card_button {
+    background-color: #F0E7DD;
+    width: 100%;
+    text-align: center;
+    color: #0E0402;
+    padding: 14px 110px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    position: relative;
+    margin-top: auto;
+}
+
+.card_button .smallview{
+    display: none;
+}
+
+
+/* #endregion */
+
+/* #region sec4*/
+
 @keyframes header {
     from {
         transform: translateY(-30px);
@@ -285,6 +499,7 @@ header button:active {
         transform: translateY(0px);
     }
 }
+
 @keyframes sec2 {
     from {
         transform: translateY(40px);
@@ -298,6 +513,22 @@ header button:active {
 @media screen and (max-width:1355px) {
     .br {
         display: none;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card_button {
+        background-color: #F0E7DD;
+        width: 100%;
+        text-align: center;
+        color: #0E0402;
+        padding: 14px 40px;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans";
     }
 }
 
@@ -331,6 +562,10 @@ header button:active {
     .hero {
         gap: 50px;
     }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width:900px) {
@@ -356,6 +591,7 @@ header button:active {
 
 @media (max-width: 770px) {
     .hero {
+        margin-bottom: 30px;
         grid-template-columns: 1fr;
         grid-template-areas:
             "rewards"
@@ -420,11 +656,13 @@ header button:active {
     }
 
     .hero_buttons .firstbutton {
-        padding: 10px 114px;
+        padding: 10px ;
+        width: 100%;
     }
 
     .hero_buttons .secondbutton {
-        padding: 10px 140px;
+        padding: 10px;
+        width: 100%;
     }
 
 
@@ -486,9 +724,10 @@ header button:active {
         padding: 12px 0;
         text-align: center;
         justify-content: center;
+        border-radius: 8px;
     }
 
-    
+
 
     .rating p:nth-child(2) {
         display: none;
@@ -499,27 +738,115 @@ header button:active {
         font-size: 11px;
         font-weight: 500px;
         font-family: "Plus Jakarta Sans";
-        
+
     }
 
     .roast,
     .org {
         border-right: 0px solid #D3C3C066;
-        
+
     }
 
-    .org{
+    .org {
         border-left: 1px solid #D3C3C066;
         border-right: 1px solid #D3C3C066;
     }
-    .rat .row{
+
+    .rat .row {
         justify-content: center;
     }
 
-    .roast , .org , .rat{
+    .roast,
+    .org,
+    .rat {
         width: calc((100% - 100px) / 3);
     }
 
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sec2_title :nth-child(2) {
+        display: block;
+    }
+
+    .sec2_title :nth-child(5) {
+        display: block;
+    }
+
+    .sec2_title :nth-child(1) {
+        display: none;
+    }
+
+    .sec2_title :nth-child(4) {
+        display: none;
+    }
+
+    .sec2_title {
+        display: block;
+    }
+
+
+
+    .card_img .tag {
+        position: absolute;
+        background-color: #F6ECE2;
+        color: #845326;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans";
+        padding: 5px 14px;
+        border-radius: 2px;
+        top: auto;
+        left: auto;
+        right: 10px;
+        bottom: -50px;
+
+    }
+
+    .card_img .price {
+        position: absolute;
+        color: #0E0402;
+        background-color: #FFF8F3E5;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Playfair Display";
+        padding: 6px 14px;
+        border-radius: 12px;
+        bottom: auto;
+        top: 10px;
+
+    }
+
+    .card_button {
+        background-color: #2B1B17;
+        width: 100%;
+        text-align: center;
+        color: #FFF8F3;
+        padding: 14px;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans";
+        margin-top: auto;
+    }
+
+    .tag span:nth-child(1) {
+        display: none;
+    }
+
+    .tag span:nth-child(2) {
+        display: block;
+    }
+
+
+
+    .card_button .smallview{
+        display: inline;
+        margin-right: 6px;
+        width: 12px;
+    }
 
 
 

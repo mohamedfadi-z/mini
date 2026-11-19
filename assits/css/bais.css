@@ -14,11 +14,18 @@ button{
     border: 0px;
 }
 .container{
-    width: calc(100% - 100px);
+    width: calc(100% - 150px);
     margin: auto;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.button_anim:hover{
+    transform: scale(1.04);
+}
+.button_anim:active{
+    transform: scale(0.99);
 }

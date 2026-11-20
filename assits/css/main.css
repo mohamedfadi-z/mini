@@ -301,7 +301,7 @@ header button:active {
     gap: 18px;
 }
 
-.sec2_title :nth-child(2) {  
+.sec2_title :nth-child(2) {
     display: none;
     font-size: 16px;
     font-weight: 600;
@@ -310,7 +310,8 @@ header button:active {
     position: relative;
     left: 30px;
 }
-.sec2_title :nth-child(2)::before {  
+
+.sec2_title :nth-child(2)::before {
     content: "";
     display: block;
     width: 26px;
@@ -354,6 +355,7 @@ header button:active {
 
 
 .cards {
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -361,6 +363,7 @@ header button:active {
 }
 
 .card {
+    box-shadow: 0 4px 20px -2px #2B1B170A;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -481,7 +484,7 @@ header button:active {
     margin-top: auto;
 }
 
-.card_button .smallview{
+.card_button .smallview {
     display: none;
 }
 
@@ -489,6 +492,163 @@ header button:active {
 /* #endregion */
 
 /* #region sec4*/
+
+
+.third_sec {
+    margin: 111px 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+}
+
+.img_bc img {
+    width: 100%;
+    border: 8px solid white;
+    border-radius: 16px;
+
+}
+
+.img_bc {
+    width: 85%;
+    border: 1px solid #D3C3C066;
+    border-radius: 16px;
+    margin: auto;
+    position: relative;
+}
+
+.sec3_img_tag {
+    border-radius: 8px;
+    background-color: var(--prim);
+    padding: 16px 24px;
+    color: #FFDCC2;
+    position: absolute;
+    right: -28px;
+    bottom: -28px;
+}
+
+.sec3_img_tag :nth-child(1) {
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+}
+
+.sec3_img_tag :nth-child(2) {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+}
+
+.sec3_right .text p:nth-child(1) {
+    background-color: #F6ECE2;
+    color: #845326;
+    border: 1px solid #D3C3C080;
+    padding: 7px 15px;
+    border-radius: 12px;
+    max-width: 124px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+}
+
+.sec3_right .text p:nth-child(1) span {
+    display: none;
+
+}
+
+.sec3_right .text h2:nth-child(2) {
+    margin-top: 24px;
+    color: #0E0402;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+}
+
+.sec3_right .text p:nth-child(3) {
+    line-height: 1.9;
+    margin-top: 24px;
+    color: #0E0402;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+}
+
+.sec3_right .text p:nth-child(4) {
+    display: none;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #0E0402;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+}
+
+.advantages {
+    line-height: 1.7;
+    margin-top: 30px;
+    gap: 16px;
+}
+
+.adv {
+    flex-wrap: nowrap;
+    align-items: start;
+    gap: 16px;
+}
+
+.advantages .adv p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #0E0402;
+}
+
+.advantages .adv p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+}
+
+.advantages .adv p:nth-child(2) {
+    display: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #0E0402;
+}
+
+.advantages .adv p:nth-child(4) {
+    display: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #4F4442;
+}
+
+
+
+
+.third_sec button {
+    background-color: var(--prim);
+    color: #FFF8F3;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    border-radius: 4px;
+    max-width: 211px;
+    margin-top: 50px;
+
+}
+
+.adv img:nth-child(1) {
+    display: none;
+}
+
+
+
+
+/* #endregion*/
 
 @keyframes header {
     from {
@@ -511,6 +671,11 @@ header button:active {
 }
 
 @media screen and (max-width:1355px) {
+
+    .third_sec {
+        gap: 30px;
+    }
+
     .br {
         display: none;
     }
@@ -556,7 +721,107 @@ header button:active {
     }
 
 
+
 }
+
+@media screen and (max-width: 1200px) {
+
+    .adv {
+
+        align-items: center;
+
+    }
+
+    .container {
+        .container {
+            width: calc(100% - 70px);
+        }
+    }
+
+    .third_sec {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "img text"
+            "adv adv"
+            "button button";
+
+
+    }
+
+    .sec3_right {
+        display: contents;
+    }
+
+    .sec3_left {
+        grid-area: img;
+    }
+
+    .text {
+        grid-area: text;
+    }
+
+    .advantages {
+        grid-area: adv;
+        display: flex;
+        background-color: #FCF2E8;
+        border: 1px solid #D3C3C033;
+        padding: 10px 20px;
+        border-radius: 12px;
+        line-height: 1.2;
+    }
+
+
+    .third_sec button {
+        grid-area: button;
+    }
+
+    .advantages .adv p:nth-child(1) {
+        display: none;
+    }
+
+    .advantages .adv p:nth-child(3) {
+        display: none;
+    }
+
+    .advantages .adv p:nth-child(2) {
+        display: block;
+        font-size: 14px;
+
+    }
+
+    .advantages .adv p:nth-child(4) {
+        display: block;
+        font-size: 12px;
+
+    }
+
+    .advantages>:nth-child(2) {
+        padding: 0 8px;
+        border-left: 2px solid #D3C3C066;
+        border-right: 2px solid #D3C3C066;
+    }
+
+    .adv img:nth-child(1) {
+        display: block;
+    }
+
+    .adv img:nth-child(2) {
+        display: none;
+    }
+
+    .third_sec button {
+        margin-top: 20px;
+        max-width: none;
+        width: 50%;
+        margin: auto;
+        background-color: #F6ECE2;
+        border: 1px solid #D3C3C066;
+        color: var(--prim);
+    }
+}
+
 
 @media screen and (max-width:1050px) {
     .hero {
@@ -565,6 +830,25 @@ header button:active {
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:950px) {
+    nav {
+        display: none;
+
+    }
+
+    .list {
+        display: block;
+    }
+
+    .button {
+        gap: 10px;
+    }
+
+    .container {
+        width: calc(100% - 50px);
     }
 }
 
@@ -589,7 +873,22 @@ header button:active {
 }
 
 
+
+
 @media (max-width: 770px) {
+
+    .cards {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        padding-bottom: 32px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
     .hero {
         margin-bottom: 30px;
         grid-template-columns: 1fr;
@@ -656,7 +955,7 @@ header button:active {
     }
 
     .hero_buttons .firstbutton {
-        padding: 10px ;
+        padding: 10px;
         width: 100%;
     }
 
@@ -667,19 +966,21 @@ header button:active {
 
 
     .right .bc {
-
         display: none;
     }
 
     .pic {
-        max-width: 600px;
+        width: 100%;
         margin: auto;
     }
 
     .hero_img {
-
+        margin: auto;
         padding: 0;
+        inset: 0;
     }
+
+
 
     .label img {
         display: none;
@@ -842,36 +1143,177 @@ header button:active {
 
 
 
-    .card_button .smallview{
+    .card_button .smallview {
         display: inline;
         margin-right: 6px;
         width: 12px;
     }
 
 
+    .third_sec {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+        grid-template-areas:
+            "img "
+            "text"
+            "adv"
+            "button";
 
 
+    }
 
-}
-
-@media screen and (max-width:950px) {
-    nav {
+    .sec3_right .text p:nth-child(3) {
         display: none;
 
     }
 
-    .list {
+    .sec3_right .text h2:nth-child(2) {
+        margin-top: 4px;
+
+    }
+
+    .sec3_right .text p:nth-child(4) {
         display: block;
+        line-height: 1.5;
+        margin-top: 10px;
+        color: #0E0402;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: "Plus Jakarta Sans";
     }
 
-    .button {
-        gap: 10px;
+
+    .sec3_right .text p:nth-child(1) span {
+        display: block;
+        font-size: 12px;
+        color: #845326;
+        width: 400px;
     }
 
-    .container {
-        width: calc(100% - 50px);
+    .sec3_right .text p:nth-child(1) {
+        background-color: transparent;
+        font-size: 0px;
+        border: none;
+        position: relative;
+
+        margin-left: 40px;
+
+
     }
+
+    .sec3_right .text p:nth-child(1)::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: #845326;
+        position: absolute;
+        bottom: 13px;
+        left: -20px;
+
+
+    }
+
+
+
+    .img_bc img {
+        width: 100%;
+        border: none;
+        border-radius: 16px;
+
+    }
+
+    .img_bc {
+        width: 100%;
+        border: none;
+        border-radius: 16px;
+        position: relative;
+    }
+
+    .sec3_img_tag {
+        border-radius: 12px;
+        background-color: #2B1B17E5;
+        padding: 4px 12px;
+        color: #FFDCC2;
+        position: absolute;
+        right: auto;
+        bottom: auto;
+        top: 10px;
+        left: 10px;
+    }
+
+    .sec3_img_tag :nth-child(1) {
+        font-size: 12px;
+        font-weight: 600;
+        font-family: "Playfair Display";
+        color: #FFF8F3;
+    }
+
+    .sec3_img_tag :nth-child(2) {
+        font-size: 0;
+
+    }
+
+    .advantages {
+        grid-area: adv;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .advantages>:nth-child(2) {
+        flex-wrap: nowrap;
+        align-items: start;
+        gap: 16px;
+        background-color: #FCF2E8;
+        border: 1px solid #D3C3C033;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .adv {
+        flex-wrap: nowrap;
+        align-items: start;
+        gap: 16px;
+        background-color: #FCF2E8;
+        border: 1px solid #D3C3C033;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .third_sec button {
+        margin-top: 20px;
+        max-width: none;
+        width: 100%;
+        margin: auto;
+        background-color: #F6ECE2;
+        border: 1px solid #D3C3C066;
+        color: var(--prim);
+    }
+
+    .sec3_right .text h2:nth-child(2) {
+        font-size: 28px;
+    }
+
+
+    .third_sec {
+        margin: 32px 0;
+
+    
 }
+
+}
+
+
 
 @media screen and (max-width:500px) {
     .logo a {

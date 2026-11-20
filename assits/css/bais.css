@@ -23,9 +23,13 @@ button{
     align-items: center;
 }
 
-.button_anim:hover{
-    transform: scale(1.04);
-}
+
 .button_anim:active{
     transform: scale(0.99);
+}
+
+@media (hover: hover) {
+    .button_anim:hover {
+        transform: scale(1.04);
+    }
 }

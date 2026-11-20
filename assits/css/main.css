@@ -1162,6 +1162,9 @@ header button:active {
 
 
     }
+    .img_bc{
+        grid-area: img;
+    }
 
     .sec3_right .text p:nth-child(3) {
         display: none;

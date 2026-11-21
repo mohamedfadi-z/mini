@@ -22,14 +22,9 @@ button{
     flex-wrap: wrap;
     align-items: center;
 }
-
-
+.button_anim:hover{
+    transform: scale(1.04);
+}
 .button_anim:active{
     transform: scale(0.99);
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .button_anim:hover {
-        transform: scale(1.04);
-    }
 }

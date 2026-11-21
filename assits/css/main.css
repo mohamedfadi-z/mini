@@ -278,8 +278,6 @@ header button:active {
 
 /* #endregion */
 
-
-
 /* #region sec3*/
 
 
@@ -495,7 +493,7 @@ header button:active {
 
 
 .third_sec {
-    margin: 111px 0;
+    margin: 190px 0;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -649,6 +647,98 @@ header button:active {
 
 
 /* #endregion*/
+
+
+
+/* #region sec5*/
+
+.section_5 {
+    background-color: #2B1B17;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 80px;
+
+}
+
+.sec5_welcome {
+    background-color: #FFF8F31A;
+    padding: 6px 16px;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #FFDCC2;
+    border-radius: 12px;
+}
+.sec5_welcome span{
+    display: none;
+}
+
+.section_5 h2 {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    color: #FFF8F3;
+    text-align: center;
+}
+
+.section_5>p {
+    max-width: 568.27001953125px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #D3C3C0;
+    text-align: center;
+}
+.section_5>p span{
+    display: none;
+    max-width: 568.27001953125px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Plus Jakarta Sans";
+    color: #D3C3C0;
+    text-align: center;
+}
+
+.sec5_buttons {
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.sec5_button1 button {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    color: #FFDCC2;
+}
+
+.sec5_button1 {
+    background-color: #FFF8F30D;
+    border: dotted 1px #845326;
+    border-radius: 4px;
+    padding: 12px 24px;
+}
+
+.sec5_button2 button {
+    background-color: #845326;
+    color: #FFF8F3;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans";
+    border-radius: 4px;
+    padding: 12px 32px;
+}
+
+
+
+/* #endregion */
+
+
 
 @keyframes header {
     from {
@@ -1162,7 +1252,8 @@ header button:active {
 
 
     }
-    .img_bc{
+
+    .img_bc {
         grid-area: img;
     }
 
@@ -1311,8 +1402,71 @@ header button:active {
     .third_sec {
         margin: 32px 0;
 
-    
-}
+
+    }
+
+
+
+
+
+
+
+    .section_5 {
+        padding: 20px 20px;
+
+    }
+
+    .sec5_welcome img{
+        display: none;
+    }
+    .sec5_welcome {
+        font-size: 0;
+    }
+    .sec5_welcome span{
+        display:block;
+        font-size: 12px;
+    }
+
+    .section_5 h2 {
+        font-size: 28px;
+        
+    }
+
+    .section_5>p {
+        font-size: 0;
+    }
+    .section_5>p span{
+        font-size: 14px;
+        display: block;
+    }
+
+    .sec5_buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        margin-top: 0px;
+    }
+
+    .sec5_button1 button {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans";
+        color: #FFDCC2;
+    }
+    .sec5_button1 button span {
+        display: none;
+    }
+    .sec5_button1 img {
+        display: none;
+    }
+    .sec5_button2 button {
+        width: 100%;
+        padding: 12px 0;
+    }
+    .sec5_button2  {
+        max-width: 400px;
+        width: 100%;
+    }
 
 }
 

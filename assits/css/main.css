@@ -307,7 +307,7 @@ header button:active {
     color: #845326;
     position: relative;
     left: 30px;
-    
+
 }
 
 .sec2_title :nth-child(2)::before {
@@ -544,7 +544,7 @@ header button:active {
     border: 1px solid #D3C3C080;
     padding: 7px 15px;
     border-radius: 12px;
-    max-width: 124px;
+    width: fit-content;
     font-size: 12px;
     font-weight: 600;
     font-family: "Plus Jakarta Sans";
@@ -664,6 +664,9 @@ header button:active {
     padding-bottom: 64px;
     margin-bottom: 80px;
 
+    background-image: radial-gradient(circle 300px at top right , #6b452149 , transparent) 
+    , radial-gradient(circle 400px at bottom left , #ffdcc22e , transparent);
+
 }
 
 .sec5_welcome {
@@ -782,9 +785,17 @@ footer {
     color: #D3C3C0;
 }
 
+.footer_disc span{
+    display: none;
+}
+
 .footer_media {
     gap: 12px;
     padding-top: 8.7px;
+}
+
+.media_phone{
+    display: none;
 }
 
 .footer_quickLinks {
@@ -1253,8 +1264,14 @@ footer {
 
 @media (max-width: 770px) {
 
+
+
     .button_anim:hover {
-        transform: none;
+        transform: scale(1);
+    }
+
+    .button_anim:active {
+        transform: scale(0.99);
     }
 
     .cards {
@@ -1379,8 +1396,8 @@ footer {
         background-color: #FFF8F3F2;
         padding: 4px 10px;
         border-radius: 12px;
-        bottom: 35px;
-        left: 35px;
+        bottom: 25px;
+        left: 25px;
     }
 
     .label p:nth-child(1) {
@@ -1527,6 +1544,11 @@ footer {
         display: inline;
         margin-right: 6px;
         width: 12px;
+    }
+
+    .card_button .largview {
+        display: none;
+
     }
 
 
@@ -1703,6 +1725,8 @@ footer {
 
     .section_5 {
         padding: 20px 20px;
+        background-image: radial-gradient(circle 300px at top right , #6b452149 , transparent) 
+    , radial-gradient(circle 0 at bottom left , #ffdcc22e , transparent);
 
     }
 
@@ -1775,13 +1799,84 @@ footer {
 
     .shop_info {
         grid-template-columns: 1fr;
+        padding: 32px 0;
+        gap: 10px;
     }
 
     .footer_quickLinks .links {
-
         grid-template-columns: 1fr 1fr;
-
     }
+
+    .footer_quickLinks p {
+        display: none;
+    }
+
+    .footer_openinghours{
+        display: none;
+    }
+
+    .dispatch{
+        display:none;
+    }
+
+
+    .shop_info{
+        grid-template-areas:
+        "logo"
+        "disc"
+        "links"
+        "media"        
+        ;
+    }
+
+    .footer_logo_disc_media{
+        display: contents;
+        
+    }
+
+
+
+    .footer_logo{
+        grid-area: logo;
+    }
+    .footer_disc{
+        grid-area: disc;
+        font-size: 0;
+    }
+
+    .footer_disc span{
+        
+        display: block;
+        font-size: 14px;
+    }
+    
+    .media_desctop{
+        display: none;
+    }
+    .media_phone{
+        display: flex;
+    }
+    
+    .footer_quickLinks{
+        padding: 16px 0;
+        border-top:1px solid #81747133 ;
+        border-bottom:1px solid #81747133 ;
+        grid-area: links;
+    }
+
+    .privacy_links{
+        display: none;
+    }
+
+    .privacy_sec{
+        
+        padding-top:7px ;
+        padding-bottom:40px ;
+        display: flex;
+        justify-content: center;
+    }
+    
+
 
 
 

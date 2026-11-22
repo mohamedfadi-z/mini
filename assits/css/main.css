@@ -1252,6 +1252,10 @@ footer {
 
 @media (max-width: 770px) {
 
+    .button_anim:hover {
+        transform: none;
+    }
+
     .cards {
 
         display: grid;

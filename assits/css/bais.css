@@ -36,8 +36,3 @@ button {
     transform: scale(0.99);
 }
 
-@media screen and (max-width:770px) {
-    .button_anim:hover {
-        transform: none;
-    }
-}

@@ -307,6 +307,7 @@ header button:active {
     color: #845326;
     position: relative;
     left: 30px;
+    
 }
 
 .sec2_title :nth-child(2)::before {
@@ -1448,7 +1449,7 @@ footer {
     }
 
     .sec2_title :nth-child(2) {
-        display: block;
+        display: inline;
     }
 
     .sec2_title :nth-child(5) {

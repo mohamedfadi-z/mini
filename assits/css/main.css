@@ -297,7 +297,12 @@ header button:active {
     padding-top: 112px;
     padding-bottom: 64px;
     gap: 18px;
+    animation: title linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
 }
+    
+
 
 .sec2_title :nth-child(2) {
     display: none;
@@ -367,7 +372,10 @@ header button:active {
     flex-direction: column;
     background-color: #fff;
     border-radius: 6px;
+
 }
+
+
 
 .card_img {
     position: relative;
@@ -664,8 +672,7 @@ header button:active {
     padding-bottom: 64px;
     margin-bottom: 80px;
 
-    background-image: radial-gradient(circle 300px at top right , #6b452149 , transparent) 
-    , radial-gradient(circle 400px at bottom left , #ffdcc22e , transparent);
+    background-image: radial-gradient(circle 300px at top right, #6b452149, transparent), radial-gradient(circle 400px at bottom left, #ffdcc22e, transparent);
 
 }
 
@@ -785,7 +792,7 @@ footer {
     color: #D3C3C0;
 }
 
-.footer_disc span{
+.footer_disc span {
     display: none;
 }
 
@@ -794,7 +801,7 @@ footer {
     padding-top: 8.7px;
 }
 
-.media_phone{
+.media_phone {
     display: none;
 }
 
@@ -858,9 +865,11 @@ footer {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+
 }
 
 .counteropen {
+    flex-wrap: nowrap;
     gap: 4px;
     font-size: 12px;
     font-weight: 600;
@@ -1055,6 +1064,82 @@ footer {
     to {
         transform: translateY(0px);
     }
+}
+
+@keyframes title {
+    from {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes card1 {
+
+    0%,
+    10% {
+        opacity: 0;
+        transform: translateY(200px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes card2 {
+
+    0%,
+    40% {
+        opacity: 0;
+        transform: translateY(200px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes card3 {
+
+    0%,
+    50% {
+        opacity: 0;
+        transform: translateY(200px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@media screen and (min-width:770px) {
+
+    .card:nth-child(1) {
+        animation: card1;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+    }
+
+    .card:nth-child(2) {
+        animation: card2;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+    }
+
+    .card:nth-child(3) {
+        animation: card3;
+        animation-timeline: view();
+        animation-range: entry 0% entry 100%;
+    }
+
 }
 
 @media screen and (max-width:1355px) {
@@ -1725,8 +1810,7 @@ footer {
 
     .section_5 {
         padding: 20px 20px;
-        background-image: radial-gradient(circle 300px at top right , #6b452149 , transparent) 
-    , radial-gradient(circle 0 at bottom left , #ffdcc22e , transparent);
+        background-image: radial-gradient(circle 300px at top right, #6b452149, transparent), radial-gradient(circle 0 at bottom left, #ffdcc22e, transparent);
 
     }
 
@@ -1811,71 +1895,73 @@ footer {
         display: none;
     }
 
-    .footer_openinghours{
+    .footer_openinghours {
         display: none;
     }
 
-    .dispatch{
-        display:none;
+    .dispatch {
+        display: none;
     }
 
 
-    .shop_info{
+    .shop_info {
         grid-template-areas:
-        "logo"
-        "disc"
-        "links"
-        "media"        
+            "logo"
+            "disc"
+            "links"
+            "media"
         ;
     }
 
-    .footer_logo_disc_media{
+    .footer_logo_disc_media {
         display: contents;
-        
+
     }
 
 
 
-    .footer_logo{
+    .footer_logo {
         grid-area: logo;
     }
-    .footer_disc{
+
+    .footer_disc {
         grid-area: disc;
         font-size: 0;
     }
 
-    .footer_disc span{
-        
+    .footer_disc span {
+
         display: block;
         font-size: 14px;
     }
-    
-    .media_desctop{
+
+    .media_desctop {
         display: none;
     }
-    .media_phone{
+
+    .media_phone {
         display: flex;
     }
-    
-    .footer_quickLinks{
+
+    .footer_quickLinks {
         padding: 16px 0;
-        border-top:1px solid #81747133 ;
-        border-bottom:1px solid #81747133 ;
+        border-top: 1px solid #81747133;
+        border-bottom: 1px solid #81747133;
         grid-area: links;
     }
 
-    .privacy_links{
+    .privacy_links {
         display: none;
     }
 
-    .privacy_sec{
-        
-        padding-top:7px ;
-        padding-bottom:40px ;
+    .privacy_sec {
+
+        padding-top: 7px;
+        padding-bottom: 40px;
         display: flex;
         justify-content: center;
     }
-    
+
 
 
 
@@ -1904,6 +1990,21 @@ footer {
         padding: 6px 12px;
         border-radius: 4px;
         font-size: 12px;
+    }
+
+
+    .card_info h3 {
+        font-size: 20px;
+    }
+
+
+    .card_button {
+
+        padding: 10px;
+
+        font-size: 15px;
+
+
     }
 
 }

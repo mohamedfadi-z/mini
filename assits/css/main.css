@@ -232,6 +232,7 @@ header button:active {
     aspect-ratio: 1/1;
     transform: rotate(-2deg);
     border-radius: 12px;
+    animation: right-hero 1s;
 
 }
 
@@ -1066,6 +1067,16 @@ footer {
     }
 }
 
+@keyframes right-hero {
+    from{
+        
+        transform: translateX(100px) rotate(10deg);
+    }
+    to{
+        
+        transform: translate(0px) rotate(-2deg);
+    }
+}
 @keyframes title {
     from {
         transform: translateY(300px);
